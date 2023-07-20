@@ -9,17 +9,24 @@ const productSchema = mongoose.Schema({
     required: [true, "Please enter a name of the place"],
   },
   date: {
-    type: Date,
-    required: true,
-    default: new Date(),
+    arrival: {
+      type: Date,
+      required: true,
+      default: new Date(),
+    },
+    departure: {
+      type: Date,
+      required: true,
+      default: new Date(),
+    }
   },
   image: {
     type: String,
-    required: [true, "Please enter an image url"]
+    required: [true, "Please enter an image url"],
   },
   text: {
     type: String,
-    required: [true, "Please add some text"]
+    required: [true, "Please add some text"],
   },
 });
 

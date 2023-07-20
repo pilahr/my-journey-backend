@@ -1,10 +1,17 @@
+// import express from "express";
+// import mongoose from "mongoose";
+// import cors from "cors";
+
 require("dotenv").config();
+
+const cors = require("cors");
 
 const express = require("express");
 const mongoose = require("mongoose");
 const Product = require("./models/productModel");
 const app = express();
 
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 
 // routes
@@ -82,8 +89,8 @@ mongoose
     `mongodb+srv://piyapornlahr:${process.env.MONGODB_PASSWORD}@cluster0.6pohbn1.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(3000, () => {
-      console.log(`Node API app is running on port 3000`);
+    app.listen(8080, () => {
+      console.log(`Node API app is running on port 8080`);
     });
     console.log("Connected to MongoDB");
   })
