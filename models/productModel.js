@@ -1,24 +1,14 @@
 const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema({
-  id: {
-    type: Number,
-  },
   place: {
     type: String,
     required: [true, "Please enter a name of the place"],
   },
   date: {
-    arrival: {
-      type: Date,
-      required: true,
-      default: new Date(),
-    },
-    departure: {
-      type: Date,
-      required: true,
-      default: new Date(),
-    }
+    type: Date,
+    required: true,
+    default: new Date(),
   },
   image: {
     type: String,

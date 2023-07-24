@@ -5,7 +5,6 @@
 require("dotenv").config();
 
 const cors = require("cors");
-
 const express = require("express");
 const mongoose = require("mongoose");
 const Product = require("./models/productModel");
@@ -15,7 +14,7 @@ app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 
 // routes
-
+// READ
 app.get("/holidays", async (req, res) => {
   try {
     const products = await Product.find({});
