@@ -88,8 +88,8 @@ mongoose
     `mongodb+srv://piyapornlahr:${process.env.MONGODB_PASSWORD}@cluster0.6pohbn1.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(8080, () => {
-      console.log(`Node API app is running on port 8080`);
+    app.listen(3000, () => {
+      console.log(`Node API app is running on port 3000`);
     });
     console.log("Connected to MongoDB");
   })
